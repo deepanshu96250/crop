@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-0: #8DECB4;
+            --green-1: #41B06E;
+            --green-2: #1A4D2E;
+            --green-3: #0c2315;
+            --blue-border: rgb(32, 32, 89);
+          }
+        
+         body{
+            margin: 0;padding: 0;
+            /* font-family: 'Poppins', sans-serif; */
+            background-color: var(--green-0);
+            font-family: "Lexend Deca", sans-serif;
+            display: flex;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* border-bottom: 1px solid rgb(22, 22, 80); */
+        }
+        .div-hr{
+            border-bottom: 0.5px solid var(--blue-border);
+            width: 96%;
+            margin:0 0 10px 0px;
+            vertical-align: middle;
+        }
+        #logo{
+            width: 14vw;
+            margin: 10px;
+            filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+        }
+        a{
+            text-decoration: none;
+            color: var(--green-3);
+            padding-left: 8px;
+        }
+        
+        i{
+            margin: 5px 5px 5px 10px;
+        }
+        side{
+            background-color: var(--green-1);
+            width: 15vw;
+            height: 100vh;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 0px 20px 20px 0px;
+            box-shadow: 0 0 10px;
+            font-family: "Lexend Deca", sans-serif;
+            transition: ease 0.25s;
+        
+            
+        }
+        #option a {
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        #option a:hover{
+            background-color: var(--green-2);
+            color : #e3f4e8;
+            border-radius:0px 20px 20px 0px;
+        }
+        section{
+            height: 100vh;
+            width: 85vw;
+           
+        }
+        #headings{
+           padding: 5px 15px;
+           /* scale:1.25; */
+        }
+        #large{
+            font-size:32px;
+            font-weight: 600;
+            margin: 0;
+            padding: 5px 0px 0px 15px;
+        }
+        #small{
+            margin: 0;
+            padding: 0px 0px 0px 15px ;
+            font-size:15px;
+        
+        }
+        form input{
+            background-color: #ffffff;
+            border: 0px;
+            height: 35px;
+            padding: 0px 20px;
+            width: 230px;
+            border-radius: 50px;
+            font-size: large;
+            margin: 0px 10px;
+        }
+        
+        form input:hover{
+            background-color: #f0eeee;
+            border: 0px;
+            height: 35px;
+            width: 230px;
+            scale: 1.05;
+            transition: ease .2s;
+            border-radius: 50px;
+            font-size: large;
+            margin: 0px 10px;
+        }
+        form input:focus{
+            background-color: #ffffff;
+            outline: 0px solid rgb(170, 170, 255);
+            height: 35px;
+            width: 230px;
+            border-radius: 50px;
+            font-size: large;
+            scale: 1.05;
+            padding: 0px 25px;
+            margin: 0px 10px;
+        }
+        #search_user img{
+            height: 40px;
+            border: 1px solid var(--blue-border);
+            border-radius: 50%;
+            margin: 0px 25px;
+            box-shadow: 0 0 5px;
+        }
+        #search_user{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* color: white; */
+        }
+        #crop_form{
+            width: 75vw;
+            height: 200px;
+            padding: 20px;
+            /* border: 1px solid black; */
+            box-shadow: 0 0 10px black;
+            background-image: url('/static/crop bg.jpg');
+            filter: hue-rotate(0deg);
+            margin: 15px;
+            color: white;
+            border-radius: 20px;
+        }
+        #crop_head{
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .green_it{
+            color: rgb(113, 226, 113);
+        }
+        #form_button{
+            width: 95%;
+            /* background-color: #fff; */
+            
+            padding: 10px;
+        }
+        #form_button button{
+            color: white;
+            background-color: transparent;
+            backdrop-filter: blur(3px);
+            width: 200px!important;
+            padding: 10px 30px;  font-family: "Lexend Deca", sans-serif;
+            line-height: 1;
+            font-size: 25px;
+            margin: 15px;
+            /* font-weight: 600; */
+            border: 0.5px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        
+        }
+        #form_button a{
+            color: white;
+            background-color: transparent;
+            backdrop-filter: blur(3px);
+            width: 200px;
+            padding: 8px 40px;  font-family: "Lexend Deca", sans-serif;
+            line-height: 1;
+            font-size: 25px;
+            margin: 15px;
+            /* font-weight: 600; */
+            border: 0.5px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        
+        }
+        #form_button :hover{
+            color: var(--green-2);
+            background-color: white;
+            backdrop-filter: blur(3px);
+            width: 200px;
+            padding: 10px 40px;
+            font-size: 25px;
+            scale: 1.03;
+            margin: 15px;
+            font-weight: 600;
+            box-shadow: 5px 5px var(--green-2);
+            transition: all ease 0.25s;
+            border: 0.5px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+        
+        }
+        #other_function{
+            color: var(--green-3);
+            font-size: 28px;
+            font-weight: 800;
+            margin: 10px 0px 0px 25px;
+            
+        }
+        #function_card{
+            display: flex;
+            justify-content: space-around;
+            padding: 25px 40px;
+        }
+        .other_card{
+            height: 300px;
+            padding-top: 20px;
+            width:100%;
+            margin: 0px 15px;
+            filter: brightness(1.5);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px;
+        }
+        .other_card:hover{
+            scale: 1.1;
+            transition: ease .4s;
+        }
+        #function_card div{
+            display : flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        #function_card img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin: 10px;
+            filter: brightness(0.67);
+        }
+        .theme-panel {
+            position: fixed;
+            transform: translateZ(-5px);
+            height: 400px;
+            width:  600px; 
+            padding: 15px 20px;
+            top: 25%;
+            left: 33%;
+            border-radius: 20px;
+            border: 1px solid rgb(88, 19, 114);
+            background-color: #b851e8; /* Adjust as needed */
+            box-shadow: 0 0 30px rgb(194, 11, 240); /* Adjust shadow as needed */
+            transition:  0.2s ease; 
+            scale: 0;
+          }
+          
+          .theme-panel.open {
+           scale: 1;
+          }
+          
+    </style>
+
+</head>
+<body>
+    <side>
+        <img id="logo" src="/static/logo.png" alt="krishi seva">
+        <div id="option">
+            <div class="sidebar">
+                <a href="#"><i class="fa-solid fa-house"></i> Home </a>
+            </div>
+            <div class="sidebar">
+                <a href="#"><i class="fa-solid fa-address-card"></i> About Us </a>
+            </div>
+            <div >
+                <a href="#"><i class="fa-solid fa-envelope"></i> Contact </a>
+            </div>
+            <div id="theme-button">
+                <a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i> Theme </a>
+            </div>
+            <div >
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i>Login / Register </a>
+            </div>
+        </div>  
+        
+        
+    </side>
+    
+    <section>
+        <nav>
+           <div id="headings">
+                <div id="large"> Welcome to KRISHI SEVA </div>
+                <div id="small">A Crop Recommendation System</div>
+           </div>
+          <div id="search_user">
+            <form action="/search" method="get">
+                <input class="input" type="text" name="q"  placeholder="&#x1F50E;&#xFE0E;   Search... "></input>
+              </form>
+              <img src="/static/user.png" alt="user">
+          </div>         
+          
+        </nav>
+        <center><div class="div-hr"></div></center>
+        <main>
+            <center><div id="crop_form">
+                <span id="crop_head"><span class="green_it">F</span>ind <span class="green_it">y</span>our <span class="green_it">p</span>erfect <span class="green_it">C</span>rop</span><br>
+                <span id="crop_lul">Empowering Your Career Journey <br> Find Your Perfect Match with Our CROP Recommendation System</span>
+                <div id="form_button"><a href="/index">Try Now</a><button>Instruction</button></div>
+            </div></center>
+            <span id="other_function">Other Upcoming Functions</span>
+            <div id="function_card">
+                <div id="pest" class="other_card"><img  src="/static/pest.jpg" alt=""> Pest control recommendation</div><div class="other_card"><img src="/static/weather forcast.jpg" alt="">Weather forcasting</div>
+                
+                <div class="other_card"><img src="/static/market price.jpg" alt="">Market price analysis</div>
+            </div>
+        </main>
+        <div id="theme-panel" class="theme-panel">
+            Change theme
+            <div id="theme-option">
+                <div id="dark-theme">
+                    
+                </div>
+                <div id="light-theme">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var light_theme=["#8DECB4", "#41B06E", "#1A4D2E", "#0c2315"];
+var dark_theme=["#070F2B", "#1B1A55","#535C91", ,"#070F2B" ];
+var theme=1;
+const themeButton = document.getElementById('theme-button');
+
+// Add event listener to toggle panel visibility
+themeButton.addEventListener('click', function() {
+  if(theme==1){
+    //dark mode
+    document.body.style.color='white';
+    document.getElementById('crop_form').style = "filter: hue-rotate(90deg);";
+
+    // document.getElementsByClassName('other_card').style.color='white';
+    document.documentElement.style.setProperty('--green-0', dark_theme[0]);
+    document.documentElement.style.setProperty('--green-1', dark_theme[1]);
+    document.documentElement.style.setProperty('--green-2', dark_theme[2]);
+    document.documentElement.style.setProperty('--green-3', dark_theme[3]);
+    theme=0;
+  }
+  else {
+    document.body.style.color='black';
+    document.getElementById('crop_form').style = "filter: hue-rotate(0deg);";
+    //light mode
+    document.documentElement.style.setProperty('--green-0', light_theme[0]);
+    document.documentElement.style.setProperty('--green-1', light_theme[1]);
+    document.documentElement.style.setProperty('--green-2', light_theme[2]);
+    document.documentElement.style.setProperty('--green-3', light_theme[3]);
+    theme=1;
+  }
+});
+    </script>
+</body>
+</html>
